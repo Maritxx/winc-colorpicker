@@ -16,10 +16,8 @@
 
 
 /*TO DO
-1. Hamburger menu opens on hover instead of click.
-2. Transition for the menu (sliding in)
-4. Radio buttons showcase which color is active.
-5. Color can be changed with keyboard. */
+1. Border around active button in menu.
+2. Color can be changed with keyboard. Onkeyup/onkeydown -> cycle through colors. */
 
 
 //TOGGLES MENU

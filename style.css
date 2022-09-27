@@ -97,6 +97,12 @@ ol, ul {
 }
 
 /*Stylesheets + Constants*/
+/*General Styling*/
+body {
+  font-size: 20px;
+  margin: 20px;
+}
+
 /*Hamburger Menu Styling*/
 .menu__holder .menu-toggle__button {
   width: 50px;
@@ -107,15 +113,21 @@ ol, ul {
   cursor: pointer;
 }
 .menu__holder ul {
-  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  margin-left: -100%;
   max-width: 250px;
+  width: 100%;
   border: 2px solid white;
+  transition: margin-left 500ms ease-in-out;
 }
 .menu__holder ul.toggleMenu {
-  display: block;
+  margin-left: 0px;
 }
 .menu__holder ul li {
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 .color-option__red {
@@ -135,6 +147,11 @@ ol, ul {
 }
 .color-option__purple {
   background-color: #CC99C9;
+}
+
+.selected-color__holder {
+  margin-top: 300px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

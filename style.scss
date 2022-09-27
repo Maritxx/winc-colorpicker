@@ -2,6 +2,13 @@
 @use "reset";
 
 
+/*General Styling*/
+body {
+    font-size: 20px;
+    margin: 20px;
+}
+
+
 /*Hamburger Menu Styling*/
 .menu__holder {
     .menu-toggle__button {
@@ -14,16 +21,22 @@
     }
 
     ul {
-        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        margin-left: -100%;
         max-width: 250px;
+        width: 100%;
         border: 2px solid white;
+        transition: margin-left 500ms ease-in-out;
 
         &.toggleMenu {
-            display: block;
+            margin-left: 0px;
         }
 
         li {
             padding: 10px 20px;
+            cursor: pointer;
         }
     }
 }
@@ -60,4 +73,9 @@
         $colorOption: #CC99C9;
         background-color: $colorOption;  
     }
+}
+
+.selected-color__holder {
+    margin-top: 300px;
+    text-align: center;
 }
