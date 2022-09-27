@@ -1,0 +1,63 @@
+/*Stylesheets + Constants*/
+@use "reset";
+
+
+/*Hamburger Menu Styling*/
+.menu__holder {
+    .menu-toggle__button {
+        width: 50px;
+        height: 50px;
+        background-image: url("img/hamburger_menu.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    ul {
+        display: none;
+        max-width: 250px;
+        border: 2px solid white;
+
+        &.toggleMenu {
+            display: block;
+        }
+
+        li {
+            padding: 10px 20px;
+        }
+    }
+}
+
+
+//Color options Styling
+.color-option {
+    &__red {
+        $colorOption: #FF6663;
+        background-color: $colorOption;
+    }
+
+    &__orange {
+        $colorOption: #FEB144;
+        background-color: $colorOption;        
+    }
+
+    &__yellow {
+        $colorOption: #FDFD97;
+        background-color: $colorOption;    
+    }
+
+    &__green {
+        $colorOption: #9EE09E;
+        background-color: $colorOption;  
+    }
+
+    &__blue {
+        $colorOption: #9EC1CF;
+        background-color: $colorOption;  
+    }
+
+    &__purple {
+        $colorOption: #CC99C9;
+        background-color: $colorOption;  
+    }
+}
