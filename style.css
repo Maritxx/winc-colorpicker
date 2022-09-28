@@ -101,6 +101,7 @@ ol, ul {
 body {
   font-size: 20px;
   margin: 20px;
+  transition: background-color 400ms ease-in;
 }
 
 /*Hamburger Menu Styling*/
