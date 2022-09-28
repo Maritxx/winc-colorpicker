@@ -16,8 +16,7 @@
 
 
 /*TO DO
-1. Border around active button in menu.
-2. Color can be changed with keyboard. Onkeyup/onkeydown -> cycle through colors. */
+1. Border around active button in menu. */
 
 
 //TOGGLES MENU
@@ -31,20 +30,39 @@ const toggleMenu = function() {
 menuToggle.addEventListener("click", toggleMenu);
 
 
-//GETS COLOR FROM BUTTON + CHANGES BG. 
+//FUNCTION TO CHANGE COLOR OF BG + CHANGE TEXT BASED ON SELECTED ELEMENT.
+const selectColor = function(selectedElement) {
+    const selectedColor = window.getComputedStyle(selectedElement).getPropertyValue('background-color');
+    document.body.style.backgroundColor = selectedColor;
+
+    document.getElementById("currentColor").innerText = "The current color is " + selectedElement.innerHTML;
+}
+
+
+//EVENT LISTENERS THAT TARGET THE CORRECT ELEMENT.
 const colorOptions = document.querySelectorAll("#menuContent li");
 
-Array.from(colorOptions).forEach((colorOption) => { 
-    colorOption.addEventListener("click", function() {
+for (let i = 0; i < colorOptions.length; i++) {
+    colorOptions[i].addEventListener("click", function() {
+        const selectedElement = colorOptions[i];
 
-        const selectedColor = window.getComputedStyle(colorOption).getPropertyValue('background-color');
-
-        document.body.style.backgroundColor = selectedColor;
-
-        document.getElementById("currentColor").innerText = "The current color is " + colorOption.innerHTML;
+        selectColor(selectedElement);
 
         toggleMenu();
     });
+};
+
+document.addEventListener("keyup", function(e) {
+    if (menuContent.classList.contains("toggleMenu")) {
+        if (e.key >= 1 && e.key <= 6) {
+            const selectedElement = colorOptions[e.key - 1];
+
+            selectColor(selectedElement);
+
+            toggleMenu();
+        };
+    };
 });
+
 
 
