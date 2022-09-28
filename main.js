@@ -4,7 +4,7 @@ const menuContent = document.querySelector("#menuContent");
 
 const toggleMenu = function() {
     menuContent.classList.toggle("toggleMenu");
-}
+};
 
 menuToggle.addEventListener("click", toggleMenu);
 
@@ -21,7 +21,7 @@ const selectColor = function(selectedElement) {
     });
 
     selectedElement.classList.add("activeBorder");
-}
+};
 
 
 //EVENT LISTENERS THAT TARGET THE CORRECT ELEMENT ON CLICK OR KEYPRESS.
