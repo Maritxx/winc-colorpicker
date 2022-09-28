@@ -96,7 +96,7 @@ ol, ul {
   text-decoration: none;
 }
 
-/*Stylesheets + Constants*/
+/*Stylesheet*/
 /*General Styling*/
 body {
   font-size: 20px;
@@ -150,6 +150,11 @@ body {
 }
 .color-option__purple {
   background-color: #CC99C9;
+}
+
+.activeBorder {
+  border: solid 3px black;
+  font-weight: bold;
 }
 
 .selected-color__holder {

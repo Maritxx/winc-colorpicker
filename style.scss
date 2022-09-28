@@ -1,4 +1,4 @@
-/*Stylesheets + Constants*/
+/*Stylesheet*/
 @use "reset";
 
 
@@ -77,6 +77,11 @@ body {
         $colorOption: #CC99C9;
         background-color: $colorOption;  
     }
+}
+
+.activeBorder {
+    border: solid 3px black;
+    font-weight: bold;
 }
 
 .selected-color__holder {
